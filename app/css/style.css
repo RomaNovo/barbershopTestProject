@@ -29,29 +29,53 @@ body {
     background-image: url("../img/logo-mobile.png"); }
 
 .header__nav .nav {
-  position: relative; }
-  .header__nav .nav__icon {
+  position: relative;
+  padding-top: 50px; }
+  .header__nav .nav .nav__toggle {
+    display: none; }
+    .header__nav .nav .nav__toggle:checked ~ .nav__item {
+      display: block;
+      width: 250px;
+      margin-left: 70px; }
+    .header__nav .nav .nav__toggle:checked + .nav__label {
+      top: 0;
+      left: 0; }
+  .header__nav .nav .nav__label {
+    color: #fff;
     width: 70px;
     height: 50px;
     position: absolute;
     top: 0;
-    right: 0;
-    background: url(../img/nav__icon-mobile.png) no-repeat 35px 20px #6a4d38;
-    background-position: center; }
+    left: 250px;
+    line-height: 50px;
+    background-color: #6a4d38; }
   .header__nav .nav__list {
     text-align: center;
-    list-style-type: none; }
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; }
   .header__nav .nav__item {
+    width: 300px;
+    height: 50px;
     padding: 13px 0 13px;
     font: 18px/24px "PTSansNarrowBold";
     background-color: #826550;
     color: #fff;
-    text-transform: uppercase; }
-    .header__nav .nav__item:nth-child(n+2) {
+    text-transform: uppercase;
+    border-bottom: 1px solid #71543f;
+    box-shadow: inset 4px 0 2px   #543d2d; }
+    .header__nav .nav__item_iconed {
+      height: 313px;
+      background-color: #6a4d38; }
+    .header__nav .nav__item:nth-child(n+4) {
       display: none; }
 
 .header__statistics {
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative;
+  z-index: 1; }
   .header__statistics .statistics {
     padding: 27px 0 0; }
     .header__statistics .statistics__title {
