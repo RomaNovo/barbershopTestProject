@@ -10,9 +10,11 @@
 * {
   box-sizing: border-box; }
 
-body {
+body, .header__nav .nav__list, .slaider__control .control__list, .section-info__news .news__list, .feedback__person .person__name, .feedback__control .control__list, .footer__contact .contact__social .social__title, .footer__contact .contact__social .social__icon .icon__list, .footer__contact .contact__author .author__text {
   margin: 0;
-  padding: 0;
+  padding: 0; }
+
+body {
   background-color: #282828; }
 
 .container {
@@ -37,13 +39,11 @@ body {
     background: url(../img/nav__icon-mobile.png) no-repeat 35px 20px #6a4d38;
     background-position: center; }
   .header__nav .nav__list {
-    margin: 0;
-    padding: 0;
     text-align: center;
     list-style-type: none; }
   .header__nav .nav__item {
     padding: 13px 0 13px;
-    font: 18px/24px 'PTSansNarrowBold';
+    font: 18px/24px "PTSansNarrowBold";
     background-color: #826550;
     color: #fff;
     text-transform: uppercase; }
@@ -57,7 +57,7 @@ body {
     .header__statistics .statistics__title {
       margin: 0 0 15px 0;
       padding: 0 50px 0 48px;
-      font: 900 30px/30px 'PTSansNarrowBold';
+      font: 900 30px/30px "PTSansNarrowBold";
       text-transform: uppercase;
       text-align: center; }
     .header__statistics .statistics__text {
@@ -94,7 +94,7 @@ body {
         margin-top: 20px;
         width: 115px;
         color: #f7f4f1;
-        font: 18px/18px 'PT Sans Narrow';
+        font: 18px/18px "PTSansNarrow";
         text-align: end; }
 
 .slaider {
@@ -125,15 +125,14 @@ body {
       height: 100%;
       display: block; }
     .slaider__item .item__title {
-      padding-top: 25px;
-      padding-bottom: 10px;
-      font: bold 30px 'PT Sans Narrow';
+      padding: 25px 0 10px 0;
+      font: bold 30px "PTSansNarrow";
       text-transform: uppercase;
       text-align: center;
       color: #fff; }
     .slaider__item .item__text {
       color: #bfbdba;
-      font: 20px/27px 'PT Sans Narrow';
+      font: 20px/27px "PTSansNarrow";
       width: 90%;
       text-align: center;
       padding-left: 37px; }
@@ -141,8 +140,6 @@ body {
     margin-top: 23px;
     padding-bottom: 8px; }
     .slaider__control .control__list {
-      margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center; }
     .slaider__control .control__item {
@@ -169,7 +166,7 @@ body {
     .section-info__news .news__title {
       margin: 0;
       padding: 0 0 9px 29px;
-      font: 30px 'PTSansNarrowBold';
+      font: 30px "PTSansNarrowBold";
       text-transform: uppercase; }
     .section-info__news .news__button {
       order: 10; }
@@ -181,13 +178,10 @@ body {
         border: 1px solid #e5ddd5; }
         .section-info__news .news__button .button__link {
           display: block;
-          font: 18px/24px 'PTSansNarrowBold';
+          font: 18px/24px "PTSansNarrowBold";
           text-transform: uppercase;
           text-decoration: none;
           color: black; }
-    .section-info__news .news__list {
-      padding: 0;
-      margin: 0; }
     .section-info__news .news__element {
       padding-top: 15px;
       list-style-type: none; }
@@ -212,15 +206,15 @@ body {
               border: 25px solid transparent;
               border-top: 10px solid black; }
             .section-info__news .news__element .element__date .date__day {
-              font: bold 30px "PT Sans Narrow";
+              font: 30px "PTSansNarrowBold";
               background-color: black; }
             .section-info__news .news__element .element__date .date__month {
               margin-top: -12px;
               padding-top: 3px;
-              font: 16px "PT Sans Narrow";
+              font: 16px "PTSansNarrow";
               background-color: black; }
         .section-info__news .news__element .element__text {
-          font: 18px/27px 'PTSansNarrow';
+          font: 18px/27px "PTSansNarrow";
           padding-left: 19px; }
         .section-info__news .news__element .element__span {
           position: relative; }
@@ -244,7 +238,7 @@ body {
   .feedback__title {
     margin: 0;
     padding: 25px 0 0;
-    font: 30px/30px 'PTSansNarrowBold';
+    font: 30px/30px "PTSansNarrowBold";
     text-transform: uppercase;
     text-align: center; }
   .feedback__person {
@@ -257,19 +251,15 @@ body {
       .feedback__person .person__description {
         margin-left: 20px; }
       .feedback__person .person__name {
-        margin: 0;
-        padding: 0;
-        font: 24px/27px 'PTSansNarrowBold'; }
+        font: 24px/27px "PTSansNarrowBold"; }
       .feedback__person .person__comment {
         margin: 0;
         padding: 10px 35px 0 0;
-        font: 18px/27px 'PTSansNarrow'; }
+        font: 18px/27px "PTSansNarrow"; }
   .feedback__control {
     margin-top: 23px;
     padding-bottom: 13px; }
     .feedback__control .control__list {
-      margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center; }
     .feedback__control .control__item {
@@ -292,28 +282,23 @@ body {
     .footer__contact .contact__info .info__title {
       margin: 0;
       padding: 33px 0 0 0;
-      font: 18px 'PTSansNarrowBold';
+      font: 18px "PTSansNarrowBold";
       text-align: center; }
     .footer__contact .contact__info .info__address {
       margin: 0;
       padding: 12px 30px 0;
-      font: 18px/27px 'PTSansNarrow';
+      font: 18px/27px "PTSansNarrow";
       text-align: center; }
     .footer__contact .contact__info .info__tel {
       margin: 18px auto 0;
       padding: 12px 0 12px;
       max-width: 280px;
-      font: 18px/24px 'PTSansNarrowBold';
+      font: 18px/24px "PTSansNarrowBold";
       text-align: center;
       border: 1px solid #3e3e3e; }
-    .footer__contact .contact__social .social__title {
-      margin: 0;
-      padding: 0; }
     .footer__contact .contact__social .social__icon .icon {
       margin-top: 26px; }
       .footer__contact .contact__social .social__icon .icon__list {
-        margin: 0;
-        padding: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -335,16 +320,14 @@ body {
     .footer__contact .contact__author {
       margin-top: 28px; }
       .footer__contact .contact__author .author__text {
-        margin: 0;
-        padding: 0;
-        font: 18px/27px 'PTSansNarrow';
+        font: 18px/27px "PTSansNarrow";
         text-align: center;
         padding-bottom: 12px; }
       .footer__contact .contact__author .author__name {
         margin: 0 auto;
         padding: 12px 0 12px;
         max-width: 280px;
-        font: 18px/24px 'PTSansNarrowBold';
+        font: 18px/24px "PTSansNarrowBold";
         text-align: center;
         text-transform: uppercase;
         border: 1px solid #3e3e3e; }
