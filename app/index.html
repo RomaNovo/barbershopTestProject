@@ -19,13 +19,77 @@
 					
 					<ul class="nav__list">
 						<input type="checkbox" name="toggle" id="menu" class="	nav__toggle">
-						<label for="menu" class="nav__label">Меню</label>
-						<li class="nav__item">Главная</li>
-						<li class="nav__item">Наши работы</li>
-						<li class="nav__item">Записаться</li>
-						<li class="nav__item">Контакты</li>
-						<li class="nav__item">Html Academy</li>
-						<li class="nav__item nav__item_iconed">Вход</li>
+						<label for="menu" class="nav__label" id="nav__label">
+							<div class="label" id="label">
+								<span class="label__span"></span>
+								<span class="label__span"></span>
+								<span class="label__span"></span>
+							</div>
+						</label>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Главная
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Наши работы
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Записаться
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Контакты
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Html Academy
+							</a>
+						</li>
+						<li class="nav__item nav__item_iconed">
+							<a href="#" class="nav__link">
+								Вход
+							</a>
+						
+							<div class="nav__profile">
+								<div class="profile">
+									<div class="profile__title">
+										Личный кабинет
+									</div>
+									<div class="profile__txt">
+										Введите свой логин и пароль, чтобы войти
+									</div>
+									<div class="profile__form">
+										<div class="form">
+											<input type="text" class="form__input form__input_login" placeholder="Логин">
+											<input type="text" class="form__input form__input_pass"
+											placeholder="Пароль">
+											<input type="checkbox" class="form__checkbox" id="form__checkbox">
+											<label for="form__checkbox" class="form__box"></label>
+											<label for="form__checkbox" class="form__label">
+												Запомни меня
+											</label>
+											<div class="form__text">
+												<a href="#" class="form__link">
+													Я забыл пароль!
+												</a>
+											</div>
+											<div class="form__btn form__btn_enter">
+												Войти
+											</div>
+											<div class="form__btn">
+												Закрыть
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -275,6 +339,20 @@
 			</div>
 		</div>
 	</footer>
-</div>	
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+        $(document).ready(function() {
+      $('#label').click(function() {
+        $(this).toggleClass('open');
+      });
+    });    
+</script>
+
 </body>
 </html>

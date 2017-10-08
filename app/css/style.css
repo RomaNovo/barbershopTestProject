@@ -34,12 +34,17 @@ body {
   .header__nav .nav .nav__toggle {
     display: none; }
     .header__nav .nav .nav__toggle:checked ~ .nav__item {
+      margin-left: 70px;
+      padding-left: 20px;
       display: block;
       width: 250px;
-      margin-left: 70px; }
+      text-align: start;
+      box-shadow: inset 14px 0px  10px -9px  #543d2d; }
     .header__nav .nav .nav__toggle:checked + .nav__label {
       top: 0;
       left: 0; }
+    .header__nav .nav .nav__toggle:checked ~ .nav__item_iconed {
+      padding-left: 50px; }
   .header__nav .nav .nav__label {
     color: #fff;
     width: 70px;
@@ -49,15 +54,46 @@ body {
     left: 250px;
     line-height: 50px;
     background-color: #6a4d38; }
+    .header__nav .nav .nav__label .label {
+      width: 100%;
+      height: 100%; }
+      .header__nav .nav .nav__label .label__span {
+        width: 36px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        opacity: 1;
+        background-color: #fff;
+        transition: .25s ease-in-out; }
+        .header__nav .nav .nav__label .label__span:nth-child(1) {
+          background-color: #fff;
+          top: -16px;
+          border-radius: 5px; }
+        .header__nav .nav .nav__label .label__span:nth-child(3) {
+          background-color: #fff;
+          top: 15px;
+          border-radius: 5px; }
+      .header__nav .nav .nav__label .label.open .label__span:nth-child(1) {
+        top: 0;
+        transform: rotate(-135deg); }
+      .header__nav .nav .nav__label .label.open .label__span:nth-child(2) {
+        opacity: 0; }
+      .header__nav .nav .nav__label .label.open .label__span:nth-child(3) {
+        top: 0;
+        transform: rotate(135deg); }
   .header__nav .nav__list {
-    text-align: center;
-    list-style-type: none;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10; }
+    z-index: 10;
+    list-style-type: none; }
   .header__nav .nav__item {
-    width: 300px;
+    width: 320px;
     height: 50px;
     padding: 13px 0 13px;
     font: 18px/24px "PTSansNarrowBold";
@@ -65,12 +101,69 @@ body {
     color: #fff;
     text-transform: uppercase;
     border-bottom: 1px solid #71543f;
-    box-shadow: inset 4px 0 2px   #543d2d; }
+    text-align: center; }
     .header__nav .nav__item_iconed {
       height: 313px;
-      background-color: #6a4d38; }
+      font-family: "PTSansNarrow";
+      text-transform: none;
+      background-color: #6a4d38;
+      text-align: center;
+      position: relative; }
+      .header__nav .nav__item_iconed:before {
+        content: url(../img/login__icon.png);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 15px;
+        left: 21px; }
     .header__nav .nav__item:nth-child(n+4) {
       display: none; }
+  .header__nav .nav__profile .profile {
+    position: absolute;
+    width: 320px;
+    background: grey;
+    top: -200px;
+    left: -70px; }
+    .header__nav .nav__profile .profile__title {
+      font: 30px/30px "PTSansNarrowBold";
+      text-transform: uppercase;
+      margin-top: 32px;
+      text-align: center; }
+    .header__nav .nav__profile .profile__txt {
+      padding-top: 15px;
+      padding-bottom: 23px;
+      font: 18px/27px "PTSansNarrow";
+      text-align: center; }
+    .header__nav .nav__profile .profile__form .form {
+      margin: 0 auto;
+      width: 280px; }
+      .header__nav .nav__profile .profile__form .form__input {
+        width: 100%;
+        padding: 15px 0 18px 20px; }
+        .header__nav .nav__profile .profile__form .form__input_login {
+          margin-bottom: 5px; }
+        .header__nav .nav__profile .profile__form .form__input_pass {
+          margin-bottom: 20px; }
+      .header__nav .nav__profile .profile__form .form__checkbox {
+        display: none; }
+      .header__nav .nav__profile .profile__form .form__box {
+        display: inline-block;
+        width: 33px;
+        height: 33px;
+        background-color: #fff;
+        vertical-align: middle; }
+      .header__nav .nav__profile .profile__form .form__label {
+        display: inline-block;
+        padding-left: 10px;
+        vertical-align: middle; }
+      .header__nav .nav__profile .profile__form .form__text {
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: middle; }
+      .header__nav .nav__profile .profile__form .form__btn {
+        padding: 10px 0;
+        display: inline-block;
+        border: 1px solid black; }
 
 .header__statistics {
   background-color: #fff;
