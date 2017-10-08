@@ -183,16 +183,35 @@ body {
 				&:nth-child(n+4) {
 					display: none;
 				}
+			}
+
+			&__link {
+				text-decoration: none;
+				color: $white;
 			}	
 
+			.control {
+				display: none;
+				
+				&:checked ~ .nav__profile {
+					display: block;
+					
+				}
+
+			}
+
 			&__profile {
+				display: none;
+				
 
 				.profile {
 					position: absolute;
 					width: 320px;
-					background: grey;
+					background: #f8f5f2;
+					color: black;
 					top: -200px;
 					left: -70px;
+					padding-bottom: 37px;
 
 					&__title {
 						font: 30px/30px $fontBold;
@@ -213,23 +232,80 @@ body {
 						.form {
 							margin: 0 auto;
 							width: 280px;
-
 							
-							&__input {
-								width: 100%;
-								padding: 15px 0 18px 20px;
-								
-								&_login {
-									margin-bottom: 5px;
-								}
+							
+							&__login {
+								position: relative;
 
-								&_pass {
-									margin-bottom: 20px;
+								.login {
+									
+									&__input {
+										width: 100%;
+										padding: 9px 0 11px 20px;
+										border: 1px solid #e5ddd5;
+										outline: none;
+										font: 18px/30px $font;
+										margin-bottom: 7px;
+									}
+
+									&__submit {
+										width: 30px;
+										height: 30px;
+										display: block;
+										border: none; 
+										background-color: $white;
+										color: transparent;
+										position: absolute;
+										top: 10px;
+										right: 13px;
+										background-image: url(../img/form__ava.png);
+										background-position: center;
+										background-repeat: no-repeat;
+										outline: none;
+									}
+								}
+							}	
+
+							&__pass {
+								position: relative;
+
+								.pass {
+										
+									&__input {
+										width: 100%;
+										padding: 9px 0 11px 20px;
+										border: 1px solid #e5ddd5;
+										outline: none;
+										font: 18px/30px $font;
+										margin-bottom: 20px;
+									}
+
+									&__submit {
+										width: 30px;
+										height: 30px;
+										display: block;
+										border: none; 
+										background-color: $white;
+										color: transparent;
+										position: absolute;
+										top: 10px;
+										right: 13px;
+										background-image: url(../img/form__locked.png);
+										background-position: center;
+										background-repeat: no-repeat;
+										outline: none;
+									}
 								}
 							}
 
 							&__checkbox {
 								display: none;
+
+								&:checked + .form__box {
+									background-image: url(../img/checkbox-tick.png);
+									background-repeat: no-repeat;
+									background-position: center;
+								}
 
 							}
 
@@ -239,6 +315,7 @@ body {
 								height: 33px;
 								background-color: $white;
 								vertical-align: middle;
+								border: 1px solid #e5ddd5;
 							}
 
 							&__label {
@@ -255,11 +332,28 @@ body {
 								margin-left: 20px;
 								vertical-align: middle;
 							}
+
+							&__link {
+								text-decoration: none;
+								color: black;
+							}
 							
 							&__btn {
+								margin-top: 34px;
 								padding: 10px 0;
 								display: inline-block;
-								border: 1px solid black;
+								width: 130px;
+								font: 18px/24px $fontBold;
+								text-align: center;
+								border: 1px solid #e5ddd5;
+								
+
+								&_enter {
+									background-color: #826550;
+									color: $white;
+									border: none;
+									margin-right: 16px;
+								}
 							}
 
 						}

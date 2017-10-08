@@ -51,10 +51,11 @@
 							</a>
 						</li>
 						<li class="nav__item nav__item_iconed">
-							<a href="#" class="nav__link">
-								Вход
-							</a>
+							<input type="checkbox" id="control" class="control">
+							<label for="control" class="control__label">Вход</label>
 						
+								
+							</a>
 							<div class="nav__profile">
 								<div class="profile">
 									<div class="profile__title">
@@ -64,10 +65,18 @@
 										Введите свой логин и пароль, чтобы войти
 									</div>
 									<div class="profile__form">
-										<div class="form">
-											<input type="text" class="form__input form__input_login" placeholder="Логин">
-											<input type="text" class="form__input form__input_pass"
-											placeholder="Пароль">
+										<form class="form" action="#">
+
+											<div class="form__login login">
+												<input type="text" class="login__input" placeholder="Логин">
+												<input type="submit" class="login__submit">
+											</div>	
+
+											<div class="form__pass pass">
+												<input type="text" class="pass__input" placeholder="Пароль">
+												<input type="submit" class="pass__submit">
+											</div>
+
 											<input type="checkbox" class="form__checkbox" id="form__checkbox">
 											<label for="form__checkbox" class="form__box"></label>
 											<label for="form__checkbox" class="form__label">
@@ -79,12 +88,16 @@
 												</a>
 											</div>
 											<div class="form__btn form__btn_enter">
-												Войти
+												<a href="#" class="form__link">
+													Войти
+												</a>
 											</div>
 											<div class="form__btn">
-												Закрыть
+												<a href="#" class="form__link">
+													Закрыть
+												</a>
 											</div>
-										</div>
+										</form>
 									</div>
 								</div>
 							</div>
