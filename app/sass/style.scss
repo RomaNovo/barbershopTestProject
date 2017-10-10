@@ -81,12 +81,12 @@ body {
 			}
 
 			.nav__label {
-				color: $white;
 				width: 70px;
 				height: 50px;
 				position: absolute;
 				top: 0;
 				left: 250px;
+				color: $white;
 				line-height: 50px;
 				background-color: #6a4d38;
 
@@ -110,14 +110,14 @@ body {
 						transition: .25s ease-in-out;
 
 						&:nth-child(1) {
-							background-color: $white;
 							top: -16px;
+							background-color: $white;
 							border-radius: 5px;
 						}
 
 						&:nth-child(3) {
-							background-color: $white;
 							top: 15px;
+							background-color: $white;
 							border-radius: 5px;
 						}
 					}
@@ -149,9 +149,9 @@ body {
 			}	
 	
 			&__item {
+				padding: 13px 0 13px;
 				width: 320px;
 				height: 50px;
-				padding: 13px 0 13px;
 				font:  18px/24px $fontBold;
 				background-color: #826550;
 				color: #fff;
@@ -161,12 +161,11 @@ body {
 				
 				&_iconed {
 					height: 313px;
+					position: relative;
 					font-family: $font;
 					text-transform: none;
 					background-color: #6a4d38;
 					text-align: center;
-					position: relative;
-					
 					
 					&:before {
 						content: url(../img/login__icon.png);
@@ -205,18 +204,18 @@ body {
 				
 
 				.profile {
-					position: absolute;
+					padding-bottom: 37px;
 					width: 320px;
-					background: #f8f5f2;
-					color: black;
+					position: absolute;
 					top: -200px;
 					left: -70px;
-					padding-bottom: 37px;
+					background: #f8f5f2;
+					color: black;
 
 					&__title {
+						margin-top: 32px;
 						font: 30px/30px $fontBold;
 						text-transform: uppercase;
-						margin-top: 32px;
 						text-align: center;	
 					}
 
@@ -233,68 +232,21 @@ body {
 							margin: 0 auto;
 							width: 280px;
 							
-							
-							&__login {
-								position: relative;
+							&__input {
+								width: 100%;
+								padding: 9px 0 11px 20px;
+								border: 1px solid #e5ddd5;
+								outline: none;
+								font: 18px/30px $font;
+								margin-bottom: 7px;
+								background: no-repeat 94% 50%; 
 
-								.login {
-									
-									&__input {
-										width: 100%;
-										padding: 9px 0 11px 20px;
-										border: 1px solid #e5ddd5;
-										outline: none;
-										font: 18px/30px $font;
-										margin-bottom: 7px;
-									}
-
-									&__submit {
-										width: 30px;
-										height: 30px;
-										display: block;
-										border: none; 
-										background-color: $white;
-										color: transparent;
-										position: absolute;
-										top: 10px;
-										right: 13px;
-										background-image: url(../img/form__ava.png);
-										background-position: center;
-										background-repeat: no-repeat;
-										outline: none;
-									}
+								&_login {
+									background-image: url(../img/form__ava.png);
 								}
-							}	
 
-							&__pass {
-								position: relative;
-
-								.pass {
-										
-									&__input {
-										width: 100%;
-										padding: 9px 0 11px 20px;
-										border: 1px solid #e5ddd5;
-										outline: none;
-										font: 18px/30px $font;
-										margin-bottom: 20px;
-									}
-
-									&__submit {
-										width: 30px;
-										height: 30px;
-										display: block;
-										border: none; 
-										background-color: $white;
-										color: transparent;
-										position: absolute;
-										top: 10px;
-										right: 13px;
-										background-image: url(../img/form__locked.png);
-										background-position: center;
-										background-repeat: no-repeat;
-										outline: none;
-									}
+								&_pass {
+									background-image: url(../img/form__locked.png);
 								}
 							}
 
@@ -310,26 +262,26 @@ body {
 							}
 
 							&__box {
-								display: inline-block;
 								width: 33px;
 								height: 33px;
-								background-color: $white;
+								display: inline-block;
 								vertical-align: middle;
+								background-color: $white;
+								cursor: pointer;
 								border: 1px solid #e5ddd5;
 							}
 
 							&__label {
-					
-								display: inline-block;
 								padding-left: 10px;
+								display: inline-block;
 								vertical-align: middle;
+								cursor: pointer;
+								
 							}
 
-
-
 							&__text {
-								display: inline-block;
 								margin-left: 20px;
+								display: inline-block;
 								vertical-align: middle;
 							}
 
@@ -337,25 +289,30 @@ body {
 								text-decoration: none;
 								color: black;
 							}
-							
-							&__btn {
-								margin-top: 34px;
+
+							&__submit {
+								margin: 34px 16px 0 0;
 								padding: 10px 0;
-								display: inline-block;
 								width: 130px;
 								font: 18px/24px $fontBold;
-								text-align: center;
-								border: 1px solid #e5ddd5;
-								
-
-								&_enter {
-									background-color: #826550;
-									color: $white;
-									border: none;
-									margin-right: 16px;
-								}
+								background-color: #826550;
+								color: white;
+								cursor: pointer;
+								outline: none;
+								text-transform: uppercase;
+								border: 1px solid #826550;
 							}
-
+							
+							&__btn {
+								padding: 10px 0;
+								width: 130px;
+								display: inline-block;
+								font: 18px/24px $fontBold;
+								text-align: center;
+								text-transform: uppercase;
+								cursor: pointer;
+								border: 1px solid #e5ddd5;
+							}
 						}
 					}
 				}

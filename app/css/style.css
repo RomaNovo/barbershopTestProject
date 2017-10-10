@@ -46,12 +46,12 @@ body {
     .header__nav .nav .nav__toggle:checked ~ .nav__item_iconed {
       padding-left: 50px; }
   .header__nav .nav .nav__label {
-    color: #fff;
     width: 70px;
     height: 50px;
     position: absolute;
     top: 0;
     left: 250px;
+    color: #fff;
     line-height: 50px;
     background-color: #6a4d38; }
     .header__nav .nav .nav__label .label {
@@ -71,12 +71,12 @@ body {
         background-color: #fff;
         transition: .25s ease-in-out; }
         .header__nav .nav .nav__label .label__span:nth-child(1) {
-          background-color: #fff;
           top: -16px;
+          background-color: #fff;
           border-radius: 5px; }
         .header__nav .nav .nav__label .label__span:nth-child(3) {
-          background-color: #fff;
           top: 15px;
+          background-color: #fff;
           border-radius: 5px; }
       .header__nav .nav .nav__label .label.open .label__span:nth-child(1) {
         top: 0;
@@ -93,9 +93,9 @@ body {
     z-index: 10;
     list-style-type: none; }
   .header__nav .nav__item {
+    padding: 13px 0 13px;
     width: 320px;
     height: 50px;
-    padding: 13px 0 13px;
     font: 18px/24px "PTSansNarrowBold";
     background-color: #826550;
     color: #fff;
@@ -104,11 +104,11 @@ body {
     text-align: center; }
     .header__nav .nav__item_iconed {
       height: 313px;
+      position: relative;
       font-family: "PTSansNarrow";
       text-transform: none;
       background-color: #6a4d38;
-      text-align: center;
-      position: relative; }
+      text-align: center; }
       .header__nav .nav__item_iconed:before {
         content: url(../img/login__icon.png);
         width: 20px;
@@ -128,17 +128,17 @@ body {
   .header__nav .nav__profile {
     display: none; }
     .header__nav .nav__profile .profile {
-      position: absolute;
+      padding-bottom: 37px;
       width: 320px;
-      background: #f8f5f2;
-      color: black;
+      position: absolute;
       top: -200px;
       left: -70px;
-      padding-bottom: 37px; }
+      background: #f8f5f2;
+      color: black; }
       .header__nav .nav__profile .profile__title {
+        margin-top: 32px;
         font: 30px/30px "PTSansNarrowBold";
         text-transform: uppercase;
-        margin-top: 32px;
         text-align: center; }
       .header__nav .nav__profile .profile__txt {
         padding-top: 15px;
@@ -148,52 +148,18 @@ body {
       .header__nav .nav__profile .profile__form .form {
         margin: 0 auto;
         width: 280px; }
-        .header__nav .nav__profile .profile__form .form__login {
-          position: relative; }
-          .header__nav .nav__profile .profile__form .form__login .login__input {
-            width: 100%;
-            padding: 9px 0 11px 20px;
-            border: 1px solid #e5ddd5;
-            outline: none;
-            font: 18px/30px "PTSansNarrow";
-            margin-bottom: 7px; }
-          .header__nav .nav__profile .profile__form .form__login .login__submit {
-            width: 30px;
-            height: 30px;
-            display: block;
-            border: none;
-            background-color: #fff;
-            color: transparent;
-            position: absolute;
-            top: 10px;
-            right: 13px;
-            background-image: url(../img/form__ava.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            outline: none; }
-        .header__nav .nav__profile .profile__form .form__pass {
-          position: relative; }
-          .header__nav .nav__profile .profile__form .form__pass .pass__input {
-            width: 100%;
-            padding: 9px 0 11px 20px;
-            border: 1px solid #e5ddd5;
-            outline: none;
-            font: 18px/30px "PTSansNarrow";
-            margin-bottom: 20px; }
-          .header__nav .nav__profile .profile__form .form__pass .pass__submit {
-            width: 30px;
-            height: 30px;
-            display: block;
-            border: none;
-            background-color: #fff;
-            color: transparent;
-            position: absolute;
-            top: 10px;
-            right: 13px;
-            background-image: url(../img/form__locked.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            outline: none; }
+        .header__nav .nav__profile .profile__form .form__input {
+          width: 100%;
+          padding: 9px 0 11px 20px;
+          border: 1px solid #e5ddd5;
+          outline: none;
+          font: 18px/30px "PTSansNarrow";
+          margin-bottom: 7px;
+          background: no-repeat 94% 50%; }
+          .header__nav .nav__profile .profile__form .form__input_login {
+            background-image: url(../img/form__ava.png); }
+          .header__nav .nav__profile .profile__form .form__input_pass {
+            background-image: url(../img/form__locked.png); }
         .header__nav .nav__profile .profile__form .form__checkbox {
           display: none; }
           .header__nav .nav__profile .profile__form .form__checkbox:checked + .form__box {
@@ -201,36 +167,45 @@ body {
             background-repeat: no-repeat;
             background-position: center; }
         .header__nav .nav__profile .profile__form .form__box {
-          display: inline-block;
           width: 33px;
           height: 33px;
-          background-color: #fff;
+          display: inline-block;
           vertical-align: middle;
+          background-color: #fff;
+          cursor: pointer;
           border: 1px solid #e5ddd5; }
         .header__nav .nav__profile .profile__form .form__label {
-          display: inline-block;
           padding-left: 10px;
-          vertical-align: middle; }
-        .header__nav .nav__profile .profile__form .form__text {
           display: inline-block;
+          vertical-align: middle;
+          cursor: pointer; }
+        .header__nav .nav__profile .profile__form .form__text {
           margin-left: 20px;
+          display: inline-block;
           vertical-align: middle; }
         .header__nav .nav__profile .profile__form .form__link {
           text-decoration: none;
           color: black; }
-        .header__nav .nav__profile .profile__form .form__btn {
-          margin-top: 34px;
+        .header__nav .nav__profile .profile__form .form__submit {
+          margin: 34px 16px 0 0;
           padding: 10px 0;
-          display: inline-block;
           width: 130px;
           font: 18px/24px "PTSansNarrowBold";
+          background-color: #826550;
+          color: white;
+          cursor: pointer;
+          outline: none;
+          text-transform: uppercase;
+          border: 1px solid #826550; }
+        .header__nav .nav__profile .profile__form .form__btn {
+          padding: 10px 0;
+          width: 130px;
+          display: inline-block;
+          font: 18px/24px "PTSansNarrowBold";
           text-align: center;
+          text-transform: uppercase;
+          cursor: pointer;
           border: 1px solid #e5ddd5; }
-          .header__nav .nav__profile .profile__form .form__btn_enter {
-            background-color: #826550;
-            color: #fff;
-            border: none;
-            margin-right: 16px; }
 
 .header__statistics {
   background-color: #fff;
