@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Barberi</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/main.js"></script>
 </head>
 <body>
 
@@ -15,14 +16,78 @@
 			</div>
 			<div class="header__nav">
 				<div class="nav">
-					<div class="nav__icon"></div>
 					<ul class="nav__list">
-						<li class="nav__item">Главная</li>
-						<li class="nav__item">Наши работы</li>
-						<li class="nav__item">Записаться</li>
-						<li class="nav__item">Контакты</li>
-						<li class="nav__item">Html Academy</li>
-						<li class="nav__item nav__item_iconed">Вход</li>
+						<input type="checkbox" name="toggle" id="menu" class="	nav__toggle">
+						<label for="menu" class="nav__label" id="nav__label">
+							<div class="label" id="label">
+								<span class="label__span"></span>
+								<span class="label__span"></span>
+								<span class="label__span"></span>
+							</div>
+						</label>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Главная
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Наши работы
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Записаться
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Контакты
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">
+								Html Academy
+							</a>
+						</li>
+						<li class="nav__item nav__item_iconed">
+							<input type="checkbox" id="control" class="control">
+							<label for="control" class="control__label">
+								Вход
+							</label>
+							<div class="nav__profile" id="nav__profile">
+								<div class="profile">
+									<div class="profile__title">
+										Личный кабинет
+									</div>
+									<div class="profile__txt">
+										Введите свой логин и пароль, чтобы войти
+									</div>
+									<div class="profile__form">
+										<form class="form" action="">
+											<input type="text" class="form__input form__input_login" placeholder="Логин">
+											<input type="text" class="form__input form__input_pass" placeholder="Пароль">
+											<input type="checkbox" class="form__checkbox" id="form__checkbox">
+											<label for="form__checkbox" class="form__box"></label>
+											<label for="form__checkbox" class="form__label">
+												Запомни меня
+											</label>
+											<div class="form__text">
+												<a href="#" class="form__link">
+													Я забыл пароль!
+												</a>
+											</div>
+											<input type="submit" class="form__submit" value="Войти">
+											
+										
+											<div class="form__btn" id="form__btn" onclick="disp();">
+													Закрыть
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -39,17 +104,21 @@
 				
 					<div class="statistics__information">
 						<div class="information">
-							<div class="information__number 	information__number_iconed">
+							<div class="information__number information__number_iconed">
 								1 500
 							</div>
-							<div class="information__text">рублей<br> 	вложений</div>
+							<div class="information__text">
+								рублей<br> вложений
+							</div>
 						</div>
 						<div class="information">
 							<div class="information__number">
 								7 200
 							</div>
 							<div class="information__text">
-								<span class="information__span">секунд<br>	времени мастера</span>
+								<span class="information__span">
+									секунд<br>	времени мастера
+								</span>
 							</div>
 						</div>
 						<div class="information information_mod">
@@ -66,7 +135,9 @@
 								500 000 
 							</div>
 							<div class="information__text">
-								<span class="information__span">лайков и 	комплиментов</span>
+								<span class="information__span">
+									лайков и комплиментов
+								</span>
 							</div>
 						</div>
 					</div>
@@ -139,7 +210,8 @@
 					</h2>
 					<div class="news__button">
 						<div class="button">
-							<a href="" class="button__link">		Показать всe
+							<a href="" class="button__link">
+								Показать всe
 							</a>
 						</div>
 					</div>
@@ -151,19 +223,25 @@
 										<div class="date__day">
 											29
 										</div>
-										<div class="date__month">	сент
+										<div class="date__month">сент
 										</div>
 									</div>
 								</div>
-								<div class="element__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки.</div>
+								<div class="element__text">
+									Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки.
+								</div>
 							</div>
 						</li>
 						<li class="news__element">
 							<div class="element">
 								<div class="element__date">
 									<div class="date">
-										<div class="date__day">19</div>
-										<div class="date__month">сент</div>
+										<div class="date__day">
+											19
+										</div>
+										<div class="date__month">
+											сент
+										</div>
 									</div>
 								</div>
 								<div class="element__text">
@@ -175,8 +253,12 @@
 							<div class="element">
 								<div class="element__date">
 									<div class="date">
-										<div class="date__day">9</div>
-										<div class="date__month">сент</div>
+										<div class="date__day">
+											9
+										</div>
+										<div class="date__month">
+											сент
+										</div>
 									</div>
 								</div>
 								<div class="element__text"></div>
@@ -272,6 +354,19 @@
 			</div>
 		</div>
 	</footer>
-</div>	
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script>
+        $(document).ready(function() {
+      $('#label').click(function() {
+        $(this).toggleClass('open');
+      });
+    });    
+</script> 
+
 </body>
 </html>
